@@ -31,13 +31,13 @@ class MainForm(Form):
 																('A', u'Inom ett år'),
 																('B', u'Inom 2-5 år')])
 
-	col_reason = StringField(u'Kolonoskopiorsak')
+	col_reason = StringField(label=u'Kolonoskopiorsak')
 
-	bowl_prep = SelectField(u'Tarmförberedelse', choices=[('A', u'Laxabon'),
+	bowl_prep = SelectField(label=u'Tarmförberedelse', choices=[('A', u'Laxabon'),
 														('B', u'Phosforal'),
 														('C', u'Endast Klyx')])
 
-	full_col = SelectField(u'Full kolonoskopi', choices=[('yes', u'Ja - Identifikation av cekalpol'),
+	full_col = SelectField(label=u'Full kolonoskopi', choices=[('yes', u'Ja - Identifikation av cekalpol'),
 														('no', u'Nej - Ej idendifikation av cekalpol')])
 
 	feac_culture = StringField(label=u'Feacesodling', description=u'Scanna streckkod på rör')
@@ -47,12 +47,12 @@ class MainForm(Form):
 																('cancer', 'Cancer'),
 																('polyp', 'Polyp'),
 																('diverticulosis', 'Divertikulos')])
-	dna_healthy_ceakum = StringField(u'DNA:Frisk Caekum', description=u'Scanna streckkod på rör')
-	culture_healthy_ceakum = StringField(u'Odling: Frisk Caekum', description=u'Scanna streckkod på rör')
-	dna_healthy_sigma = StringField(u'DNA:Frisk Sigma', description=u'Scanna streckkod på rör')
-	culture_healthy_sigma = StringField(u'Odling: Frisk Sigma', description=u'Scanna streckkod på rör')
+	dna_healthy_ceakum = StringField(label=u'DNA:Frisk Caekum', description=u'Scanna streckkod på rör')
+	culture_healthy_ceakum = StringField(label=u'Odling: Frisk Caekum', description=u'Scanna streckkod på rör')
+	dna_healthy_sigma = StringField(label=u'DNA:Frisk Sigma', description=u'Scanna streckkod på rör')
+	culture_healthy_sigma = StringField(label=u'Odling: Frisk Sigma', description=u'Scanna streckkod på rör')
 
-	dna_polyp = StringField(u'DNA:Polyp >1cm', description=u'Scanna streckkod på rör')
+	dna_polyp = StringField(label=u'DNA:Polyp >1cm', description=u'Scanna streckkod på rör')
 	dna_polyp_loc = SelectField('', choices=[('C', 'Caekum'),
 											('T', 'Transversum'),
 											('D', 'Descendens'),
@@ -60,7 +60,7 @@ class MainForm(Form):
 											('A', 'Ascendens')])
 
 
-	dna_close_polyp = StringField(u'DNA:Nära Polyp > 1 cm', description=u'Scanna streckkod på rör')
+	dna_close_polyp = StringField(label=u'DNA:Nära Polyp > 1 cm', description=u'Scanna streckkod på rör')
 	dna_close_polyp_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),
@@ -68,7 +68,7 @@ class MainForm(Form):
 													('A', 'Ascendens')])
 
 
-	culture_close_polyp = StringField(u'Odling:Nära Polyp > 1 cm', description=u'Scanna streckkod på rör')
+	culture_close_polyp = StringField(label=u'Odling:Nära Polyp > 1 cm', description=u'Scanna streckkod på rör')
 	culture_close_polyp_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),
@@ -77,7 +77,7 @@ class MainForm(Form):
 
 
 
-	dna_cancer = StringField(u'DNA:Cancer', description=u'Scanna streckkod på rör')
+	dna_cancer = StringField(label=u'DNA:Cancer', description=u'Scanna streckkod på rör')
 	dna_cancer_loc = SelectField('', choices=[('C', 'Caekum'),
 												('T', 'Transversum'),
 												('D', 'Descendens'),
@@ -86,7 +86,7 @@ class MainForm(Form):
 
 
 
-	culture_cancer = StringField(u'Odling: Cancer', description=u'Scanna streckkod på rör')
+	culture_cancer = StringField(label=u'Odling: Cancer', description=u'Scanna streckkod på rör')
 	culture_cancer_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),
@@ -95,7 +95,7 @@ class MainForm(Form):
 
 
 
-	dna_close_cancer = StringField(u'DNA:Nära Cancer', description=u'Scanna streckkod på rör')
+	dna_close_cancer = StringField(label=u'DNA:Nära Cancer', description=u'Scanna streckkod på rör')
 	dna_close_cancer_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),
@@ -104,7 +104,7 @@ class MainForm(Form):
 
 
 
-	culture_close_cancer = StringField(u'Odling:Nära Cancer', description=u'Scanna streckkod på rör')
+	culture_close_cancer = StringField(label=u'Odling:Nära Cancer', description=u'Scanna streckkod på rör')
 	culture_close_cancer_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),
@@ -113,7 +113,7 @@ class MainForm(Form):
 
 
 
-	dna_close_diverticle = StringField(u'DNA:Nära Divertikel', description=u'Scanna streckkod på rör')
+	dna_close_diverticle = StringField(label=u'DNA:Nära Divertikel', description=u'Scanna streckkod på rör')
 	dna_close_diverticle_loc = SelectField('', choices=[('C', 'Caekum'),
 														('T', 'Transversum'),
 														('D', 'Descendens'),
@@ -122,7 +122,7 @@ class MainForm(Form):
 
 
 
-	culture_close_diverticle = StringField(u'Odling:Nära Divertikel', description=u'Scanna streckkod på rör')
+	culture_close_diverticle = StringField(label=u'Odling:Nära Divertikel', description=u'Scanna streckkod på rör')
 	culture_close_diverticle_loc = SelectField('', choices=[('C', 'Caekum'),
 															('T', 'Transversum'),
 															('D', 'Descendens'),
@@ -131,7 +131,7 @@ class MainForm(Form):
 
 
 
-	dna_ibd = StringField(u'DNA:IBD (inflammation)', description=u'Scanna streckkod på rör')
+	dna_ibd = StringField(label=u'DNA:IBD (inflammation)', description=u'Scanna streckkod på rör')
 	dna_ibd_loc = SelectField('', choices=[('C', 'Caekum'),
 											('T', 'Transversum'),
 											('D', 'Descendens'),
@@ -140,7 +140,7 @@ class MainForm(Form):
 
 
 
-	culture_ibd = StringField(u'Odling:IBD (inflammation)', description=u'Scanna streckkod på rör')
+	culture_ibd = StringField(label=u'Odling:IBD (inflammation)', description=u'Scanna streckkod på rör')
 	culture_ibd_loc = SelectField('', choices=[('C', 'Caekum'),
 												('T', 'Transversum'),
 												('D', 'Descendens'),
@@ -149,7 +149,7 @@ class MainForm(Form):
 
 
 
-	dna_close_ibd = StringField(u'DNA:Nära IBD', description=u'Scanna streckkod på rör')
+	dna_close_ibd = StringField(label=u'DNA:Nära IBD', description=u'Scanna streckkod på rör')
 	dna_close_ibd_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),
@@ -158,7 +158,7 @@ class MainForm(Form):
 
 
 
-	culture_close_ibd = StringField(u'ODL:Nära IBD', description=u'Scanna streckkod på rör')
+	culture_close_ibd = StringField(label=u'ODL:Nära IBD', description=u'Scanna streckkod på rör')
 	culture_close_ibd_loc = SelectField('', choices=[('C', 'Caekum'),
 													('T', 'Transversum'),
 													('D', 'Descendens'),

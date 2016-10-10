@@ -16,7 +16,6 @@ def write_to_xlsfile(content_df, xlsfile):
 	"""
 	Write a new dataframe line to excel file.
 	"""
-	print(content_df)
 	df = pd.read_excel(xlsfile)
 	df2 = df.append(content_df, ignore_index=True)
 	make_bkp(xlsfile)

@@ -36,7 +36,28 @@ def get_age(personnummer):
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	form = MainForm(csrf_enabled=False)
+
+
+
 	if form.validate_on_submit():
+
+		dd = OrderedDict()
+		for field in form:
+			if field.name not in ['submit', 'csrf_token']:
+				if field.label.text:
+					l_text = field.label.text
+				else:
+					l_text = field.name
+
+				if field.name == 'snr':
+					data = 'SR%03d' % field.data
+				elif field.name in ['pnumber', 'asa']:
+					data = int(field.data)
+				else:
+					data = field.data
+				dd[l_text] = data
+
+			dfd = pd.DataFrame(data=dd, index=[0])
 
 		df = pd.DataFrame(data=OrderedDict([('ID_number', 'SR%03d' % form['snr'].data),
 			('Personal_number', int(form['pnumber'].data)),
@@ -51,7 +72,7 @@ def index():
 			('Main_diagnosis', form['main_diagnosis'].data)]), index=[0])
 
 
-		excel_io.write_to_xlsfile(df, XLS_FILE)
+		excel_io.write_to_xlsfile(dfd, XLS_FILE)
 
 		return redirect('/')
 
