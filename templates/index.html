@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+<br>
+<form method="post">
+{{ form.hidden_tag() }}
+<table>
+<center>
+<tr>
+<td>
+{{ wtf.form_field(form.snr) }}
+{{ wtf.form_field(form.pnumber) }}
+{{ wtf.form_field(form.asa) }}
+{{ wtf.form_field(form.col_reason) }}
+{{ wtf.form_field(form.earlier_col) }}
+{{ wtf.form_field(form.bowl_prep) }}
+{{ wtf.form_field(form.full_col) }}
+{{ wtf.form_field(form.feac_culture) }}
+{{ wtf.form_field(form.main_diagnosis) }}
+{{ wtf.form_field(form.dna_healthy_ceakum) }}
+{{ wtf.form_field(form.culture_healthy_ceakum) }}
+{{ wtf.form_field(form.dna_healthy_sigma) }}
+{{ wtf.form_field(form.culture_healthy_sigma) }}
+</td>
+
+<tr>
+<td>
+{{ wtf.form_field(form.dna_polyp) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_polyp_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.dna_close_polyp) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_close_polyp_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.culture_close_polyp) }}
+</td>
+<td>
+{{ wtf.form_field(form.culture_close_polyp_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+
+{{ wtf.form_field(form.dna_cancer) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_cancer_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.culture_cancer) }}
+</td>
+<td>
+{{ wtf.form_field(form.culture_cancer_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.dna_close_cancer) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_close_cancer_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.culture_close_cancer) }}
+</td>
+<td>
+{{ wtf.form_field(form.culture_close_cancer_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.dna_close_diverticle) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_close_diverticle_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.culture_close_diverticle) }}
+</td>
+<td>
+{{ wtf.form_field(form.culture_close_diverticle_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.dna_ibd) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_ibd_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.culture_ibd) }}
+</td>
+<td>
+{{ wtf.form_field(form.culture_ibd_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.dna_close_ibd) }}
+</td>
+<td>
+{{ wtf.form_field(form.dna_close_ibd_loc) }}
+</td>
+</tr>
+
+<tr>
+<td>
+{{ wtf.form_field(form.culture_close_ibd) }}
+</td>
+<td>
+{{ wtf.form_field(form.culture_close_ibd_loc) }}
+</td>
+</tr>
+
+</table>
+</center>
+{{ wtf.form_field(form.submit) }}
+
+</form>
+
+
+
+{% endblock %}
