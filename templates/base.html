@@ -1,8 +1,10 @@
 {% extends "bootstrap/base.html" %}
 
+
 {% block title %}KOLBIBAKTSTUDIEN{% endblock %}
 
 {% block head %}
+<link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
 {{ super() }}
 {% endblock %}
 
