@@ -59,6 +59,9 @@ def index():
 
 			dfd = pd.DataFrame(data=dd, index=[0])
 
+		dd['Gender'] = get_gender(form['pnumber'].data)
+		dd['Age'] = get_age(form['pnumber'].data)
+
 		df = pd.DataFrame(data=OrderedDict([('ID_number', 'SR%03d' % form['snr'].data),
 			('Personal_number', int(form['pnumber'].data)),
 			('Gender', get_gender(form['pnumber'].data)),
